@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const visualizeDataSchema = new mongoose.Schema({
+const jsondataSchema = new mongoose.Schema({
     end_year : Number,
     intensity: Number,
     sector : String,
@@ -18,4 +18,4 @@ const visualizeDataSchema = new mongoose.Schema({
     title : String,
     likelihood : Number
 })
-module.exports = mongoose.model("visualizeData", visualizeDataSchema);
+module.exports = mongoose.model("visualizeData", jsondataSchema);

@@ -1,10 +1,12 @@
-const visualizeData = require('../model/visualizedata.model');
+const jsondata = require('../model/visualizedata.model');
 
 
 
 exports.getAllVisualizeData = (req, res) => {
-    visualizeData.find().then((docs) => {
+    jsondata.find().then((docs) => {
       if(docs) {
+        console.log('here')
+        console.log(docs)
         res.status(200).json({ data : docs})
       } else {
         res.status(400).json({message : "Client Server Error"})
